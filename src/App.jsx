@@ -29,7 +29,14 @@ function App() {
     })
   }
 
-  function handleDeleteTask() { }
+  function handleDeleteTask(id) {
+    setProjectState((pervState) => {
+      return {
+        ...pervState,
+        tasks: pervState.tasks.filter((task) => task.id !== id)
+      }
+    })
+  }
   ///////////////////////////
 
   function handleAddProject() {

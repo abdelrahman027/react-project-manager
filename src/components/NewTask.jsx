@@ -8,6 +8,7 @@ export default function NewTask({ onAddTask }) {
     };
 
     function handleAddTask() {
+        if (enteredTask.trim() === "") return;
         onAddTask(enteredTask)
         setEnteredTask('')
     };
